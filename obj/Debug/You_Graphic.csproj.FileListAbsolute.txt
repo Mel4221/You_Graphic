@@ -1,0 +1,15 @@
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\bin\Debug\You_Graphic.exe.config
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\bin\Debug\You_Graphic.exe
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\bin\Debug\You_Graphic.pdb
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\bin\Debug\QuickTools.dll
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\bin\Debug\QuickTools.xml
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Debug\You_Graphic.csproj.AssemblyReference.cache
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Debug\You_Graphic.csproj.SuggestedBindingRedirects.cache
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Debug\You_Graphic.Dependency_Installer.resources
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Debug\You_Graphic.You_Graphic.resources
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Debug\You_Graphic.Properties.Resources.resources
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Debug\You_Graphic.csproj.GenerateResource.cache
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Debug\You_Graphic.csproj.CoreCompileInputs.cache
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Debug\You_Graphic.csproj.CopyComplete
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Debug\You_Graphic.exe
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Debug\You_Graphic.pdb
