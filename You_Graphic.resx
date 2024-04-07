@@ -120,13 +120,6 @@
   <metadata name="Worker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="LinksBox.Text" xml:space="preserve">
-    <value>https://www.youtube.com/watch?v=Exx59CPNovM
-https://www.youtube.com/watch?v=N66CmWhgrO4
-https://www.youtube.com/watch?v=J54eUQ0xuhk
-https://www.youtube.com/watch?v=9icSIVBQtHo
-https://www.youtube.com/watch?v=Exx59CPNovM</value>
-  </data>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>138, 17</value>
   </metadata>

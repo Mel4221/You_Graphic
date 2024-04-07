@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -71,8 +72,6 @@ namespace You_Graphic
 				{
 					this.UpdateIcon();
 					this.IsUpdated = true;
-					
-				
 				}
 			}
 		}
@@ -104,7 +103,13 @@ namespace You_Graphic
 			DownloadManager download = new DownloadManager();
 			download.AllowDebugger = true; 
 			download.DownloadFile(this.Video_Icon_Url,this.IconPath);
-			while (true) { if (!Get.IsFileBusy(this.IconPath)) break; }
+			while (true) 
+			{
+					if (!Get.IsFileBusy(this.IconPath) && File.Exists(this.IconPath)) break;
+					//if (this.FailOrCompleted) break;
+			}
+			Get.Yellow($"ICON DOWNLOADED: [{this.IconPath}]");
+			Get.WaitTime(this.LoopsSpeed);
 			this.IsIconAvailable = true;
 			}).Start();
 			
@@ -147,7 +152,7 @@ namespace You_Graphic
 			bool exist, isBusy;
 			exist = File.Exists(this.InfoFile);
 			isBusy = Get.IsFileBusy(this.InfoFile);
-			if(exist && !isBusy){ Get.Red($"FILE: [{this.InfoFile}] EXIST: [{exist}] ISBUSY: [{isBusy}]"); }
+			if(exist && !isBusy){ Get.Yellow($"FILE: [{this.InfoFile}] EXIST: [{exist}] ISBUSY: [{isBusy}]"); }
 			return exist && !isBusy;
 		}
 		
@@ -157,6 +162,7 @@ namespace You_Graphic
 			{
 				if(this.IsInfoAvailable(ref download_location,ref tempId))
 				{
+					Get.Yellow("FILE INFO LOADED");
 					this.Video_Info = File.ReadAllLines(this.InfoFile);
 					Print.List(this.Video_Info);
 					this.FailOrCompleted = true;
@@ -176,7 +182,7 @@ namespace You_Graphic
 			int x, y;
 			x = 420;
 			y = 360;
-			Get.Yellow("UPDATED ICON");
+	
 			if (!this.isFisrstTime)
 			{
 				this.Controls.Remove(this.VideoIcon);
@@ -194,6 +200,7 @@ namespace You_Graphic
 				this.Controls.Add(VideoIcon);
 				this.IsUpdated = true;
 				this.isFisrstTime = false;
+				Get.Yellow("ICON UPDATED");
 				return;
 			
 		}
@@ -201,19 +208,35 @@ namespace You_Graphic
 		 
 		private void ResetState()
 		{
-			Get.Red("STATE RESET");
+			Get.Yellow("STATE RESET");
 			this.Video_Info = new string[124];
 			this.FailOrCompleted = false;
 			//this.IsDownloading = false;
-			this.IsUpdated = false; 
+			this.IsUpdated = false;
+			this.IsIconAvailable = false;
+
+		}
+		private void ClearTemps()
+		{
+			this.Temps.ForEach((item) => {
+				while (Get.IsFileBusy(item)) { }
+
+				if (File.Exists(item))
+				{
+					File.Delete(item);
+					Get.Yellow($"TEMP FILE DELETED: {item}");
+				}
+			});
 		}
 		private void DownloadBtn_Click(object sender, EventArgs e)
 		{
+			
 			if (this.CurrentAction != null) 
 			{
 				MessageBox.Show("Download already in progress...");
 				return;
 			}
+			if (this.LinksBox.Text == "") return;
 			TempPicturesBox.Visible = false; 
 			this.Links = this.LinksBox.Lines;
 			string type, link, download_location, tempId;
@@ -240,7 +263,7 @@ namespace You_Graphic
 				new Thread(() => {
 					while (this.IsReporting)
 					{
-						this.TextStatus = $"Please wait Downloading [{Osilate()}]";
+						this.TextStatus = $"Please Wait Downloading [{Osilate()}]";
 						this.IntStatus = IRandom.RandomInt(0,100);//Get.StatusNumber(line, this.Links.Length);
 
 						worker.ReportProgress(0);
@@ -249,9 +272,9 @@ namespace You_Graphic
 				}).Start();
 				for (int line =0; line  < this.Links.Length; line++)
 				{
-					
+					Get.WaitTime(this.LoopsSpeed); 
 					//worker.ReportProgress(0);
-
+					//this.FailOrCompleted = false;
 					link = this.Links[line];
 					tempId = IRandom.RandomText(8);
 					this.IconPath = $"{download_location}{Get.Slash()}{IRandom.RandomText(8)}.jpg";
@@ -261,7 +284,7 @@ namespace You_Graphic
 						this.LoadInfo(ref download_location,ref tempId);
 						Get.WaitTime(this.LoopsSpeed);
 					}).Start();
-					if (!string.IsNullOrEmpty(link))
+					if (!string.IsNullOrEmpty(link) && Uri.IsWellFormedUriString(link, UriKind.Absolute))
 					{
 						this.Temps.Add($"{download_location}{Get.Slash()}{tempId}.mp4");
 						ProcessStartInfo info = new ProcessStartInfo();
@@ -272,18 +295,11 @@ namespace You_Graphic
 						process.WaitForExit();
 					}
 					this.Temps.Add(this.IconPath);
+					Get.WaitTime(this.LoopsSpeed);
 					this.ResetState();
 				}
-				
-				this.Temps.ForEach((item) => {
-					while (Get.IsFileBusy(item)) { }
-					
-					if (File.Exists(item))
-					{
-						File.Delete(item);
-						Get.Red($"TEMP FILE DELETED: {item}");
-					}
-				});
+
+				this.ClearTemps();
 				this.IsReporting = false;
 			};
 				this.Worker.RunWorkerAsync();
@@ -307,5 +323,16 @@ namespace You_Graphic
 			CurrentStatus.Location = new Point(this.ProgressBar.Location.X, this.ProgressBar.Location.Y-40);
 			Video_Description.Location = new Point(this.ProgressBar.Location.X, Video_Description.Location.Y);
 		}
+
+		private void ClearBtn_Click(object sender, EventArgs e)
+		{
+			this.LinksBox.Clear();
+		}
 	}
 }
+/*
+ https://www.youtube.com/watch?v=Exx59CPNovM
+https://www.youtube.com/watch?v=N66CmWhgrO4
+https://www.youtube.com/watch?v=J54eUQ0xuhk
+https://www.youtube.com/watch?v=9icSIVBQtHo 
+ */

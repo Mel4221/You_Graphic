@@ -41,6 +41,7 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.TempPicturesBox = new System.Windows.Forms.PictureBox();
+			this.ClearBtn = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.Y)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.X)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.TempPicturesBox)).BeginInit();
@@ -50,7 +51,7 @@
 			// 
 			this.ProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.ProgressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.ProgressBar.Location = new System.Drawing.Point(0, 691);
+			this.ProgressBar.Location = new System.Drawing.Point(0, 791);
 			this.ProgressBar.Name = "ProgressBar";
 			this.ProgressBar.Size = new System.Drawing.Size(1823, 44);
 			this.ProgressBar.TabIndex = 3;
@@ -95,11 +96,11 @@
 			this.LinksBox.Size = new System.Drawing.Size(907, 435);
 			this.LinksBox.TabIndex = 1;
 			this.LinksBox.TabStop = false;
-			this.LinksBox.Text = resources.GetString("LinksBox.Text");
+			this.LinksBox.Text = "";
 			// 
 			// Y
 			// 
-			this.Y.Location = new System.Drawing.Point(1089, 669);
+			this.Y.Location = new System.Drawing.Point(1719, 396);
 			this.Y.Name = "Y";
 			this.Y.Size = new System.Drawing.Size(104, 69);
 			this.Y.TabIndex = 9;
@@ -109,9 +110,9 @@
 			// 
 			this.DownloadBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.DownloadBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.DownloadBtn.Location = new System.Drawing.Point(1614, 253);
+			this.DownloadBtn.Location = new System.Drawing.Point(691, 640);
 			this.DownloadBtn.Name = "DownloadBtn";
-			this.DownloadBtn.Size = new System.Drawing.Size(170, 46);
+			this.DownloadBtn.Size = new System.Drawing.Size(733, 45);
 			this.DownloadBtn.TabIndex = 2;
 			this.DownloadBtn.Text = "Download";
 			this.DownloadBtn.UseVisualStyleBackColor = false;
@@ -126,7 +127,7 @@
             "MP3",
             "MP4 720P",
             "MP4 1080P"});
-			this.Format.Location = new System.Drawing.Point(1614, 195);
+			this.Format.Location = new System.Drawing.Point(1430, 640);
 			this.Format.Name = "Format";
 			this.Format.Size = new System.Drawing.Size(168, 37);
 			this.Format.TabIndex = 5;
@@ -134,7 +135,7 @@
 			// 
 			// X
 			// 
-			this.X.Location = new System.Drawing.Point(955, 669);
+			this.X.Location = new System.Drawing.Point(1719, 285);
 			this.X.Name = "X";
 			this.X.Size = new System.Drawing.Size(104, 69);
 			this.X.TabIndex = 8;
@@ -156,7 +157,7 @@
 			this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Size = new System.Drawing.Size(1823, 38);
+			this.toolStrip1.Size = new System.Drawing.Size(1823, 25);
 			this.toolStrip1.TabIndex = 10;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
@@ -170,12 +171,25 @@
 			this.TempPicturesBox.TabIndex = 11;
 			this.TempPicturesBox.TabStop = false;
 			// 
+			// ClearBtn
+			// 
+			this.ClearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.ClearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.ClearBtn.Location = new System.Drawing.Point(1604, 195);
+			this.ClearBtn.Name = "ClearBtn";
+			this.ClearBtn.Size = new System.Drawing.Size(78, 435);
+			this.ClearBtn.TabIndex = 12;
+			this.ClearBtn.Text = "Clear";
+			this.ClearBtn.UseVisualStyleBackColor = false;
+			this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
+			// 
 			// You_Graphic
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
-			this.ClientSize = new System.Drawing.Size(1823, 735);
+			this.ClientSize = new System.Drawing.Size(1823, 835);
+			this.Controls.Add(this.ClearBtn);
 			this.Controls.Add(this.TempPicturesBox);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.Y);
@@ -215,6 +229,7 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.ToolStrip toolStrip1;
 		private System.Windows.Forms.PictureBox TempPicturesBox;
+		private System.Windows.Forms.Button ClearBtn;
 	}
 }
 
