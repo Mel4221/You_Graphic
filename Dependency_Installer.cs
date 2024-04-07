@@ -75,7 +75,7 @@ namespace You_Graphic
 		}
 		//https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe
 		private string PythonLink = "https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe";
-		private string[] PipDependencys = new string[]{"pytube", "regex" , "validators" , "moviepy", "pathvalidate" };
+		private string[] PipDependencys = new string[]{"pytube", "regex" , "validators" , "moviepy", "pathvalidate", "emoji" };
 		private string PythonD = $"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}{Get.Slash()}python.exe";
 		private Thread ReportThread;
  		private void DownloadPython()
@@ -136,8 +136,16 @@ namespace You_Graphic
 					info.Arguments = $"install {this.PipDependencys[pip]}";
 					Process process = Process.Start(info);
 					process.WaitForExit();
-					Get.WaitTime(5000);
+					
 				}
+
+				Get.Red("INSTALLING RESTRICTED AGE FILE FIX: ");
+				Get.WaitTime(5000);
+				Get.Yellow($"{Tools.RestrictedAgeFileFix} => {Tools.RestrictedAgeFixData}");
+				
+				File.WriteAllText(Tools.RestrictedAgeFileFix, Tools.RestrictedAgeFixData);
+				
+				Get.WaitTime(5000);
 				this.TextStatus = "ALL PACKAGES HAS BEEN INSTALLED SUCESSFULLY!!!";
 			 
 				if(File.Exists(this.PythonD) && !Get.IsFileBusy(this.PythonD))File.Delete(this.PythonD);

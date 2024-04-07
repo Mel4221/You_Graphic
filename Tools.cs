@@ -38,8 +38,8 @@ namespace You_Graphic
 			input = input.Substring(input.IndexOf("3"));
 			return input;
 		}
-        public static string PytubePath = @"C:\Python312\Lib\site-packages\pytube\__main__.py";
-		public static string RestrictedAgeFix = @"
+        public static string RestrictedAgeFileFix = @"C:\Python312\Lib\site-packages\pytube\__main__.py";
+		public static string RestrictedAgeFixData = @"
 		""""""
 This module implements the core developer interface for pytube.
 
