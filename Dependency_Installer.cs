@@ -75,7 +75,7 @@ namespace You_Graphic
 		}
 		//https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe
 		private string PythonLink = "https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe";
-		private string[] PipDependencys = new string[]{"pytube", "regex" , "validators" , "moviepy" };
+		private string[] PipDependencys = new string[]{"pytube", "regex" , "validators" , "moviepy", "pathvalidate" };
 		private string PythonD = $"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}{Get.Slash()}python.exe";
 		private Thread ReportThread;
  		private void DownloadPython()
