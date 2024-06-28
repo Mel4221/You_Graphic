@@ -16,8 +16,8 @@ namespace You_Graphic
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			//Application.Run(new You_Graphic());
-			Application.Run(new Dependency_Installer());
+			Application.Run(new You_Graphic());
+			//Application.Run(new Dependency_Installer());
 
 		}
 	}
