@@ -7,14 +7,14 @@
     <framework targetVersion="4.7" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="You_Graphic.exe.manifest" size="4594">
+    <dependentAssembly dependencyType="install" codebase="You_Graphic.exe.manifest" size="6971">
       <assemblyIdentity name="You_Graphic.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="en" processorArchitecture="amd64" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cAKuw3GLJGxNP5R0LHYFjiouIgtjaFEUcofrkr6ZAhY=</dsig:DigestValue>
+        <dsig:DigestValue>GqZDuXcsjnRVs09ki62cUkqTtE75hT7IytZ3bZU3ky0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

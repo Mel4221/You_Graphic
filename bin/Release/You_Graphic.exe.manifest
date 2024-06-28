@@ -75,6 +75,60 @@
       <dsig:DigestValue>5IjU9miiUpZgPfs786pMwbN1q2TJ2TF/eDFOoQs8a2c=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="you\DownloadWithArgs.py" size="878">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R4FEz9XpyVw+aSpgeucGeC0h8KilKcbPU2f1V5YEbt0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="you\MediaConverter.py" size="371">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MryrW+fWZZZ1DWOyCE6z/RiwOBNc93R5mlESSQQkyl4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="you\Searcher.py" size="2478">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7qWw2xVi9JS4y1oHcLjXh7o0luI6wkzsPxecz+95KXc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="you\SongDownloader.py" size="1590">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>sQz/Xt7dOtTZgd3T3B8SDchYYDXM+mu8mhWnUZDcLTE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="you\VideoDownloader.py" size="4791">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>VejYnOZjAD59MILBVR3GJgQvayRh3pq0HmzTwPEqhrI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="you\you.py" size="462">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7DNOgBE6sLvhmvoH3EDjlUFQTepk6msCmaTrqYm3BYQ=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="You_Graphic.exe.config" size="187">
     <hash>
       <dsig:Transforms>
