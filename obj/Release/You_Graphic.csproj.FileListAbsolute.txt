@@ -1,4 +1,6 @@
 C:\Users\Melquiceded\Documents\csharp\You_Graphic\bin\Release\You_Graphic.exe.config
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\bin\Release\You_Graphic.exe.manifest
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\bin\Release\You_Graphic.application
 C:\Users\Melquiceded\Documents\csharp\You_Graphic\bin\Release\You_Graphic.exe
 C:\Users\Melquiceded\Documents\csharp\You_Graphic\bin\Release\You_Graphic.pdb
 C:\Users\Melquiceded\Documents\csharp\You_Graphic\bin\Release\QuickTools.dll
@@ -10,6 +12,8 @@ C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Release\You_Graphic.You_Gr
 C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Release\You_Graphic.Properties.Resources.resources
 C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Release\You_Graphic.csproj.GenerateResource.cache
 C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Release\You_Graphic.csproj.CoreCompileInputs.cache
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Release\You_Graphic.exe.manifest
+C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Release\You_Graphic.application
 C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Release\You_Graphic.csproj.CopyComplete
 C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Release\You_Graphic.exe
 C:\Users\Melquiceded\Documents\csharp\You_Graphic\obj\Release\You_Graphic.pdb

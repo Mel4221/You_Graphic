@@ -29,10 +29,12 @@ namespace You_Graphic
 				{
 					if (IsInitialBase)
 					{
+
 						this.TextStatus =  Manager.CurrentTextStatus;
 						this.IntStatus =  Manager.CurrentIntStatus;
+
 					}
-						Get.WaitTime(300);
+						Get.WaitTime(500);
 				}
 			}).Start();
 		}
@@ -40,7 +42,10 @@ namespace You_Graphic
 		private string TextStatus { get; set; } = null;
 		private bool IsInitialBase { get; set; } = true;
 		private int IntStatus {get;set;} = 0;
-		private static DownloadManager Manager { get; set; } = new DownloadManager();
+		DownloadManager Manager = new DownloadManager();
+
+
+
 		private Action<BackgroundWorker> CurrentAction { get; set; } = null;
 		private void Worker_DoWork(object sender, DoWorkEventArgs e)
 		{
@@ -81,12 +86,15 @@ namespace You_Graphic
  		private void DownloadPython()
 		{
 
-			QSettings setting = new QSettings("You.config");
-			if (setting.GetSetting("FULLY-INSTALLED") == "TRUE")
+
+			//QSettings setting = new QSettings("You.config");
+			//MessageBox.Show(setting.GetSetting("FULLY-INSTALLED"));
+			if (File.Exists("You.config"))
 			{
 				this.CurrentAction = (BackgroundWorker worker) =>
 				{
- 				};
+					Get.WaitTime(250);
+				};
 				this.Worker.RunWorkerAsync();
 				return;
 			}
@@ -98,12 +106,18 @@ namespace You_Graphic
 				string pythonD = PythonD;
 				this.IsReporting = true;
 				this.StartReportLoop();
-				this.ReportThread = new Thread(() => { while (this.IsReporting) { worker.ReportProgress(0); Get.WaitTime(100); } });
+				this.ReportThread = new Thread(() => 
+				{
+					while (this.IsReporting) {
+					worker.ReportProgress(0); 
+					Get.WaitTime(1000); 
+					} });
 					this.ReportThread.Start();
-
-					Manager.AllowDebugger = true;
+	
+					//Manager.AllowDebugger = true;
 					Manager.DownloadFile(PythonLink, pythonD);
 
+					
 					this.IsInitialBase = false;
 					this.TextStatus = "INSTALLING PYTHON";
 					this.IntStatus = 100;

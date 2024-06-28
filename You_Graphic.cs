@@ -291,6 +291,7 @@ namespace You_Graphic
 						info.FileName = "python";
 						info.Arguments = $"{this.YouPath} {type} {link} {download_location}{Get.Slash()} {tempId}";
 						info.UseShellExecute = false;
+						info.CreateNoWindow = false; 
 						Process process = Process.Start(info);
 						process.WaitForExit();
 					}

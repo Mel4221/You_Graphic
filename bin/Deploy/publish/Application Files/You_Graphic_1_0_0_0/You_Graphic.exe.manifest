@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="You_Graphic.exe" version="1.0.0.0" publicKeyToken="a53a4921ef7d3a97" language="neutral" processorArchitecture="amd64" type="win32" />
+  <description asmv2:iconFile="setting.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="You_Graphic" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
+    <commandLine file="You_Graphic.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickTools.dll" size="194560">
+      <assemblyIdentity name="QuickTools" version="4000.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>PddwSLxjP0WTxB3FaIb2fFGUgxoLial7aMNMSZqAPAQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="You_Graphic.exe" size="420280">
+      <assemblyIdentity name="You_Graphic" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>rpyM3N7WLHks6DXFijmplooP78QKj28/Gg4Flyyi8OA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="setting.ico" size="67646">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5IjU9miiUpZgPfs786pMwbN1q2TJ2TF/eDFOoQs8a2c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="You_Graphic.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ibSJhBWt6kT1jcg30WbAXCZJOzy699/zUdgGnXs5g9w=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=HP\Melquiceded" issuerKeyHash="1e0a2449dd0487c94877a167c1a3332f426f88bf" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>DpCKi2Q5461RUcurK12umDKqq1PiZLktuALkLdCTE48=</DigestValue></Reference></SignedInfo><SignatureValue>WhrDTcbqEyUg7X2q21kTPpfyruo1YiKQiiz03eNz6rIX3xEn4QhZYMKkitLECn9uTs52TqUS64lrfxuAdtmAscbEY93qFy4NvNbZBZ44psaTW6XPnOqvYYhka3xAeSZ8neTnAfQgxK8G7I1vHY2tW4IM3RNIMJtGXSgAF/FiQ+s=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>yUDVoofmooVrPf7VQVIRksgc0pwACG4iMUIcSzHT8I2ot6rx3r7wn7ykYQ0E9dd3bjb9tNDbVORLa7OtgW8+c0dgDNbqnsVUCIckB7IXQVF4kdOPAMimrhu5r5YjcdpWmsFccYYK989ozMMuFKW6FKyhA7w8wZhM6mEjW14Cdi0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="8f1393d02de402b82db964e253abaa3298ae5d2babcb5151ade339648b8a900e" Description="" Url=""><as:assemblyIdentity name="You_Graphic.exe" version="1.0.0.0" publicKeyToken="a53a4921ef7d3a97" language="neutral" processorArchitecture="amd64" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=HP\Melquiceded</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Y6wF1+YhBXI5kXQG6hXiBrql/7LLu5idY8tTNK9ImLI=</DigestValue></Reference></SignedInfo><SignatureValue>x09lsRbHtE4nqu5r0oLy1vL37RQTj7lbOYAZPU5R1oDpyxRsbfD1S7+vKk9OOev+FNHBG3FvKxgvqFSZwPLoJDepCgTJR9ZMvSYxLThD/HBJLec+U/3lPqQgZTsL4lXaUZjJoES0gBMebXtSyC/JSe/wwYWHVbqRAx2+f+zj/00=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>yUDVoofmooVrPf7VQVIRksgc0pwACG4iMUIcSzHT8I2ot6rx3r7wn7ykYQ0E9dd3bjb9tNDbVORLa7OtgW8+c0dgDNbqnsVUCIckB7IXQVF4kdOPAMimrhu5r5YjcdpWmsFccYYK989ozMMuFKW6FKyhA7w8wZhM6mEjW14Cdi0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQFZn+JhNCcoxOs8CVnNL1YTANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDHhwASABQAFwATQBlAGwAcQB1AGkAYwBlAGQAZQBkMB4XDTI0MDQwODE2MjUxN1oXDTI1MDQwODIyMjUxN1owJzElMCMGA1UEAx4cAEgAUABcAE0AZQBsAHEAdQBpAGMAZQBkAGUAZDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAyUDVoofmooVrPf7VQVIRksgc0pwACG4iMUIcSzHT8I2ot6rx3r7wn7ykYQ0E9dd3bjb9tNDbVORLa7OtgW8+c0dgDNbqnsVUCIckB7IXQVF4kdOPAMimrhu5r5YjcdpWmsFccYYK989ozMMuFKW6FKyhA7w8wZhM6mEjW14Cdi0CAwEAATANBgkqhkiG9w0BAQsFAAOBgQCzWEoJGKq1Oqbkkpos2Ri322QBQysmL7IrfRNOOCzUbJMM6ewonex99EsUuiMHeiurbC+/oVyQOmZxTkEmq+1nr6yXu2gBQrlc6ODZ9tp9LhtXsb6fGpOFPJVdJ5Nr49ccmjSM0qpQkgqbbQQ95qMHKRJxTrZreQ/T1dJ/qtYXRQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
